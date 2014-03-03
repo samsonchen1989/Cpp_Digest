@@ -44,14 +44,12 @@ class SpreadsheetCell
         //overload
         void set(double inValue);
         void set(string inString);
-        //not modify any data
+        //const function will not modify any data
         string getString() const;
         double getValue() const;
 
         static string doubleToString(double inValue);
         static double stringToDouble(string inString);
-
-
 
     protected:
 

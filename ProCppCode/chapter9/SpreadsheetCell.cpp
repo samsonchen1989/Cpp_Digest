@@ -80,7 +80,6 @@ SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs)
     return (*this);
 }
 
-
 //see detail in:
 //http://stackoverflow.com/questions/6067535/error-with-c-operator-overloading
 SpreadsheetCell& SpreadsheetCell::operator+=(const SpreadsheetCell& cell)

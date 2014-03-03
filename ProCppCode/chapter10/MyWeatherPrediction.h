@@ -1,0 +1,15 @@
+#include "WeatherPrediction.h"
+
+class MyWeatherPrediction : public WeatherPrediction
+{
+public:
+    virtual void setCurrentTempCelsius(int inTemp);
+
+    virtual int getTomorrowTemCelsius();
+
+    virtual void showResult();
+
+protected:
+    static int convertCelsiusToFahrenheit(int inCelsius);
+    static int convertFahrenheitToCelsius(int inFahrenheit);
+};
