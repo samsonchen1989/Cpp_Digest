@@ -81,13 +81,16 @@ SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs)
 }
 
 //see detail in:
-//http://stackoverflow.com/questions/6067535/error-with-c-operator-overloading
+//http://goo.gl/5kSoFv
 SpreadsheetCell& SpreadsheetCell::operator+=(const SpreadsheetCell& cell)
 {
     set(mValue + cell.mValue);
     return (*this);
 }
 
+//Pay attention to left value, we don't want to change
+//left value, so we just input left by value, not the '&'
+//reference.
 SpreadsheetCell operator+(SpreadsheetCell left,
     const SpreadsheetCell& right)
 {
