@@ -3,4 +3,4 @@ cpp_digest
 
 Cpp code digest.
 
-Collection of instructive code during c++ learning.
+Collection of instructive code during c/c++ learning.
