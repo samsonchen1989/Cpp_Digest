@@ -1,3 +1,4 @@
+#include <string.h> //memset
 #include "DList.h"
 
 void dlist_init(DList *list, void (*destroy)(void *data))
@@ -25,7 +26,7 @@ void dlist_destroy(DList *list)
         }
     }
 
-    memset(list, 0, sizeof(DList));
+    memset(list, 0x00, sizeof(DList));
 
     return;
 }
@@ -78,7 +79,7 @@ int dlist_ins_next(DList *list, DListElmt *element, const void *data)
         return -1;
     }
 
-    newNode->data = data;
+    newNode->data = (void*)data;
 
     if (list->size == 0) {
         //insert as head
@@ -94,7 +95,7 @@ int dlist_ins_next(DList *list, DListElmt *element, const void *data)
             //element->next = newNode;
             list->tail = newNode;
         } else {
-            element->next->pre = newNode;
+            element->next->prev = newNode;
             //element->next = newNode;
         }
 

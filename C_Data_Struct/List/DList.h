@@ -19,7 +19,7 @@ typedef struct DList_
     void (*destroy)(void *data);
     DListElmt *head;
     DListElmt *tail;
-};
+}DList;
 
 void dlist_init(DList *list, void (*destroy)(void *data));
 void dlist_destroy(DList *list);
